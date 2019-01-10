@@ -32,7 +32,7 @@ public class OrderService {
             System.out.println(e.getMessage());
         }
         if (orders.isEmpty())
-            System.out.println("Some error, no orders loaded ");
+            System.out.println("There are no orders to execute");
         else
             System.out.println("Orders loaded");
         return orders;
