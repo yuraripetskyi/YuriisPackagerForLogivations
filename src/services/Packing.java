@@ -33,7 +33,9 @@ public class Packing {
              */
             if (counting >= number) {
                 theCase = cas;
-                System.out.println("the case is with id: " + cas.getId());
+                System.out.println("=================================================================================");
+                System.out.println("the case is with id: " + cas.getId() + " was filled with " + number + " of product " + product );
+                System.out.println("==================================================================================");
                 break;
             }
         }
@@ -70,7 +72,6 @@ public class Packing {
             if (addictionalNum < temp) {
                 addictionalNum = temp;
             }
-
 
             /*
              * trying to put more products in free space

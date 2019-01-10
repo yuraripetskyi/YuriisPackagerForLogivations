@@ -17,9 +17,7 @@ public class SConnection {
             properties.setProperty("autoReconnect", "true");
             conn =  DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/packager", properties);
 
-        } catch (ClassNotFoundException e) {
-            System.out.println(e.getMessage());
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             System.out.println(e.getMessage());
         }
     }

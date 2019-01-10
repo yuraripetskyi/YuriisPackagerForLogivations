@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class OrderService {
     private static OrderService orderService;
@@ -36,6 +37,19 @@ public class OrderService {
         else
             System.out.println("Orders loaded");
         return orders;
+    }
+
+    public void removeOrder(OrderLine order){
+        try {
+            Connection connection = SConnection.getConnection();
+            if(order!=null) {
+                PreparedStatement update = connection.prepareStatement("DELETE FROM orderline WHERE id = " + order.getId());
+                update.executeUpdate();
+            }
+            } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+
     }
 
 
