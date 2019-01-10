@@ -1,6 +1,6 @@
-package services;
+package app.services;
 
-import models.Case;
+import app.models.Case;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

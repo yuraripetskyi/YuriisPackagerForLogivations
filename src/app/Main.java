@@ -1,9 +1,11 @@
-import models.Case;
-import models.OrderLine;
-import services.CaseService;
-import services.OrderService;
-import services.Packing;
-import services.ProductService;
+package app;
+
+import app.models.Case;
+import app.models.OrderLine;
+import app.services.CaseService;
+import app.services.OrderService;
+import app.services.Packing;
+import app.services.ProductService;
 
 import java.util.HashSet;
 import java.util.List;

@@ -1,4 +1,4 @@
-package models;
+package app.models;
 
 public class OrderLine {
     private long id;

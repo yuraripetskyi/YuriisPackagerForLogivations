@@ -1,10 +1,9 @@
-package services;
+package app.services;
 
-import models.Product;
-import models.enums.Position;
+import app.models.Product;
+import app.models.enums.Position;
 
 import java.sql.*;
-import java.util.Properties;
 
 public class ProductService {
     private static ProductService productService;

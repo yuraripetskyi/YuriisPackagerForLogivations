@@ -1,8 +1,8 @@
-package services;
+package app.services;
 
-import models.Case;
-import models.Product;
-import models.enums.Position;
+import app.models.Case;
+import app.models.Product;
+import app.models.enums.Position;
 
 import java.util.Set;
 

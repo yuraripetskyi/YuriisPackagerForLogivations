@@ -1,13 +1,20 @@
-package models;
+package app.models;
 
-public class Product {
+public class Case {
+
     private long id;
     private int sizeX;
     private int sizeY;
     private int sizeZ;
 
-    public Product(long id, int sizeX, int sizeY, int sizeZ) {
+    public Case(long id, int sizeX, int sizeY, int sizeZ) {
         this.id = id;
+        this.sizeX = sizeX;
+        this.sizeY = sizeY;
+        this.sizeZ = sizeZ;
+    }
+
+    public Case(int sizeX, int sizeY, int sizeZ) {
         this.sizeX = sizeX;
         this.sizeY = sizeY;
         this.sizeZ = sizeZ;
@@ -43,7 +50,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "Case{" +
                 "id=" + id +
                 ", sizeX=" + sizeX +
                 ", sizeY=" + sizeY +
@@ -51,3 +58,4 @@ public class Product {
                 '}';
     }
 }
+
