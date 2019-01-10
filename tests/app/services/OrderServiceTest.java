@@ -1,6 +1,5 @@
-package tests.app.services;
+package app.services;
 
-import app.services.ProductService;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -12,18 +11,21 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
 
 @RunWith(Arquillian.class)
-public class ProductServiceTest {
+public class OrderServiceTest {
     @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
-                .addClass(ProductService.class)
+                .addClass(OrderService.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
     @Test
-    public void getProduct() {
-        ProductService productService = ProductService.getProductService();
-        assertNull(productService.getProduct(1));
+    public void getOrders() {
+        assertNull(OrderService.getOrderService().getOrders());
     }
 
+    @Test
+    public void getOrderService() {
+        assertNull(OrderService.getOrderService());
+    }
 }
